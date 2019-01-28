@@ -1,5 +1,6 @@
 package com.phatle.homnayangi;
 
+import android.media.MediaPlayer;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -57,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
                         });
                         dialog.show();
                         dialog.setCanceledOnTouchOutside(false);
+                    MediaPlayer canh_sup = MediaPlayer.create(MainActivity.this,R.raw.canh_sup);
+                    canh_sup.start();
                 }else if(randomNum<=70){
                     recyclerView.smoothScrollToPosition(randomNum);
                     final ErrorDialog dialog = new ErrorDialog(MainActivity.this, "Số " + (randomNum+1), "Bạn bốc trúng "+ "Canh khổ qua",R.drawable.canh_kho_qua);
@@ -69,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
                     });
                     dialog.show();
                     dialog.setCanceledOnTouchOutside(false);
+                    MediaPlayer canh_sup = MediaPlayer.create(MainActivity.this,R.raw.canh_kho_qua);
+                    canh_sup.start();
                 }else if(randomNum<=85)
                 {
                     recyclerView.smoothScrollToPosition(randomNum);
@@ -82,6 +87,8 @@ public class MainActivity extends AppCompatActivity {
                     });
                     dialog.show();
                     dialog.setCanceledOnTouchOutside(false);
+                    MediaPlayer canh_sup = MediaPlayer.create(MainActivity.this,R.raw.canh_chua_minh);
+                    canh_sup.start();
                 }
                 else {
                     recyclerView.smoothScrollToPosition(randomNum);
@@ -95,6 +102,8 @@ public class MainActivity extends AppCompatActivity {
                     });
                     dialog.show();
                     dialog.setCanceledOnTouchOutside(false);
+                    MediaPlayer canh_sup = MediaPlayer.create(MainActivity.this,R.raw.canh_chua_duoi);
+                    canh_sup.start();
                 }
 
                 //Gen Random theo tỷ lệ đều
